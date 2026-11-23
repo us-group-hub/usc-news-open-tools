@@ -37,3 +37,10 @@ Public open-data benchmarks, transparent calculator formulas, author-monetizatio
 - Live GPU vs. API Calculator: [https://usc.news/llm-api-gpu-cost-calculator/](https://usc.news/llm-api-gpu-cost-calculator/)
 - About & Editorial Policy: [https://usc.news/about/](https://usc.news/about/) · [https://usc.news/editorial-policy/](https://usc.news/editorial-policy/)
 - Telegram Channel: [https://t.me/uscnow](https://t.me/uscnow)
+
+## Live Interactive App & November 2026 Dataset (`v1.1.0`)
+
+- **Interactive Team Cost Explorer (GitHub Pages):** [https://us-group-hub.github.io/usc-news-open-tools/](https://us-group-hub.github.io/usc-news-open-tools/)
+- **Open Pricing Dataset (JSON):** [`benchmarks/ai-coding-agents-pricing-2026.json`](benchmarks/ai-coding-agents-pricing-2026.json) — verified late-2026 pricing for Cursor X Subscription, Claude Code (Pro/Max/Ultra), GitHub Copilot AI Credits, and OpenAI Codex.
+- **Full Research Report:** [AI Coding Agents Cost in Late 2026 — USC.NEWS](https://usc.news/finance/ai-coding-agents-cost-2026-cursor-x-claude-code-copilot-codex/)
+- **LLM API vs. Self-Hosted GPU Calculator:** [https://usc.news/llm-api-gpu-cost-calculator/](https://usc.news/llm-api-gpu-cost-calculator/)
