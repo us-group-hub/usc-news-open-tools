@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026 AI Coding Agents &amp; LLM Economics Open Benchmarks — USC.NEWS Open Tools</title>
+<meta name="description" content="Interactive late-2026 developer team cost estimator for Cursor X Subscription, Claude Code, GitHub Copilot AI Credits, and OpenAI Codex backed by open JSON datasets.">
+<style>
+  :root{--bg:#0b1120;--card:#111827;--bd:#1f2937;--fg:#f8fafc;--mut:#94a3b8;--acc:#38bdf8;--ok:#34d399;--warn:#fbbf24}
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 20px 60px}
+  h1{font-size:clamp(1.6rem,3vw,2.3rem);margin:0 0 10px;letter-spacing:-.02em}
+  p.lead{color:var(--mut);font-size:1.05rem;margin:0 0 26px}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:22px;margin:18px 0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
+  .kpi{background:#0f172a;border:1px solid var(--bd);border-radius:10px;padding:14px}
+  .kpi .lbl{font-size:12px;color:var(--mut);text-transform:uppercase;font-weight:700}
+  .kpi .val{font-size:1.45rem;font-weight:800;margin-top:4px;color:var(--acc)}
+  label{display:flex;justify-content:space-between;font-weight:700;margin-bottom:6px;font-size:14px}
+  input[type=range]{width:100%;accent-color:#38bdf8}
+  a{color:var(--acc);text-decoration:none;font-weight:600} a:hover{text-decoration:underline}
+  ul.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;list-style:none;padding:0;margin:12px 0 0}
+  ul.links li{background:#0f172a;border:1px solid var(--bd);border-radius:10px;padding:12px 14px}
+  .badge{display:inline-block;padding:3px 9px;border-radius:999px;background:#0c4a6e;color:#7dd3fc;font-size:12px;font-weight:700;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="badge">Open Dataset v2026.11 &bull; MIT License</span>
+  <h1>AI Coding Agents Cost Explorer (Late 2026)</h1>
+  <p class="lead">Interactive engineering-team TCO estimator comparing Cursor’s X Subscription, Claude Code, GitHub Copilot AI Credits, and OpenAI Codex. Powered by verified November 2026 pricing data from <a href="https://usc.news/finance/ai-coding-agents-cost-2026-cursor-x-claude-code-copilot-codex/">USC.NEWS</a>.</p>
+
+  <div class="card">
+    <h2 style="margin:0 0 14px;font-size:1.2rem;">Team Annual Cost Estimator</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+      <div>
+        <label><span>Standard Daily Developers</span><span id="stdOut">6</span></label>
+        <input id="std" type="range" min="1" max="40" value="6">
+      </div>
+      <div>
+        <label><span>Heavy Agentic Builders</span><span id="hvyOut">4</span></label>
+        <input id="hvy" type="range" min="0" max="20" value="4">
+      </div>
+    </div>
+    <div class="grid">
+      <div class="kpi"><div class="lbl">Copilot Mix (Pro + Pro+)</div><div class="val" id="kCop" style="color:var(--ok)">$2,592/yr</div></div>
+      <div class="kpi"><div class="lbl">Blended (Copilot + Claude Max)</div><div class="val" id="kBld">$5,520/yr</div></div>
+      <div class="kpi"><div class="lbl">Claude Team (Annual Std + Prem)</div><div class="val" id="kCla">$6,240/yr</div></div>
+      <div class="kpi"><div class="lbl">Cursor X Teams (Prem + Super)</div><div class="val" id="kCur" style="color:var(--warn)">$6,960/yr</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin:0 0 8px;font-size:1.15rem;">Full 2026 Reports &amp; Interactive Calculators</h2>
+    <ul class="links">
+      <li><a href="https://usc.news/finance/ai-coding-agents-cost-2026-cursor-x-claude-code-copilot-codex/">AI Coding Agents Cost 2026: Full Analysis &rarr;</a></li>
+      <li><a href="https://usc.news/llm-api-gpu-cost-calculator/">LLM API vs. Self-Hosted GPU Calculator &rarr;</a></li>
+      <li><a href="https://usc.news/technologies/ai-inference-economics-2026-self-hosting-gpus-vs-llm-apis/">2026 AI Inference Economics Report &rarr;</a></li>
+      <li><a href="https://usc.news/finance/five-eyes-mortgage-housing-squeeze-2026-us-uk-canada-australia-nz/">Five-Eyes 2026 Mortgage &amp; Housing Study &rarr;</a></li>
+      <li><a href="https://github.com/us-group-hub/usc-news-open-tools/blob/main/benchmarks/ai-coding-agents-pricing-2026.json">Raw JSON Dataset on GitHub &rarr;</a></li>
+      <li><a href="https://usc.news/for-journalists/">Publish &amp; Earn on USC.NEWS &rarr;</a></li>
+    </ul>
+  </div>
+</div>
+<script>
+const std=document.getElementById('std'),hvy=document.getElementById('hvy');
+function calc(){
+  const s=+std.value,h=+hvy.value;
+  document.getElementById('stdOut').textContent=s;
+  document.getElementById('hvyOut').textContent=h;
+  const f=n=>'$'+n.toLocaleString('en-US')+'/yr';
+  document.getElementById('kCop').textContent=f((s*10+h*39)*12);
+  document.getElementById('kBld').textContent=f((s*10+h*100)*12);
+  document.getElementById('kCla').textContent=f((s*20+h*100)*12);
+  document.getElementById('kCur').textContent=f((s*30+h*100)*12);
+}
+std.oninput=hvy.oninput=calc;calc();
+</script>
+</body>
+</html>
