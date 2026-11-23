@@ -1,0 +1,78 @@
+{
+  "schema_version": "2026.11",
+  "updated": "2026-11-23",
+  "source_report": "https://usc.news/finance/ai-coding-agents-cost-2026-cursor-x-claude-code-copilot-codex/",
+  "interactive_calculator": "https://usc.news/llm-api-gpu-cost-calculator/",
+  "tools": [
+    {
+      "name": "Cursor (The X Subscription)",
+      "overhaul_date": "2026-10",
+      "tiers_usd_month": {
+        "free": 0,
+        "plus": 8,
+        "premium": 30,
+        "super": 100,
+        "ultra": 200
+      },
+      "team_seat_usd_month": {
+        "premium": 30,
+        "super": 100,
+        "ultra": 200
+      },
+      "billing_notes": "Weekly usage pool covers Cursor/Grok models; Claude, GPT, and Gemini bill separately at API list rates from request #1."
+    },
+    {
+      "name": "Claude Code (Anthropic)",
+      "tiers_usd_month": {
+        "pro": 20,
+        "pro_annual_equiv": 17,
+        "max_5x": 100,
+        "ultra_10x": 200
+      },
+      "team_seat_usd_month": {
+        "standard": 25,
+        "standard_annual": 20,
+        "premium": 125,
+        "premium_annual": 100
+      },
+      "billing_notes": "Included in every paid Claude tier. Ultra removes the 5-hour rolling cap on verified accounts."
+    },
+    {
+      "name": "GitHub Copilot (AI Credits)",
+      "overhaul_date": "2026-06-01",
+      "tiers_usd_month": {
+        "free": 0,
+        "pro": 10,
+        "pro_plus": 39,
+        "max": 100
+      },
+      "included_credits": {
+        "pro": 1500,
+        "pro_plus": 7000,
+        "max": 20000
+      },
+      "overage_usd_per_credit": 0.01
+    },
+    {
+      "name": "OpenAI Codex (ChatGPT Bundle)",
+      "tiers_usd_month": {
+        "go": 8,
+        "plus": 20,
+        "pro_100": 100,
+        "pro_200": 200,
+        "pro_500": 500
+      },
+      "team_seat_usd_month": {
+        "standard": 25,
+        "standard_annual": 20
+      }
+    }
+  ],
+  "modeled_10_dev_team_annual_usd": {
+    "copilot_mix_6pro_4proplus": 2592,
+    "blended_6copilot_4claudemax": 5520,
+    "claude_team_6std_4prem_annual": 6240,
+    "cursor_x_teams_6prem_4super_inhouse_only": 6960,
+    "unmanaged_dual_seats_plus_api": 14500
+  }
+}
