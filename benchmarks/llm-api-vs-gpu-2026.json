@@ -1,0 +1,31 @@
+{
+  "dataset": "USC.NEWS 2026 LLM API vs Self-Hosted GPU TCO Benchmark",
+  "source": "https://usc.news/llm-api-gpu-cost-calculator/",
+  "methodology": "70% input / 30% output token split; mid-tier frontier API ($2.20/1M blended) vs dedicated 2x H100 node ($3,800/mo fixed + ops).",
+  "scenarios": [
+    {
+      "monthly_tokens_millions": 50,
+      "api_monthly_usd": 110,
+      "gpu_node_monthly_usd": 3800,
+      "winner": "API"
+    },
+    {
+      "monthly_tokens_millions": 500,
+      "api_monthly_usd": 1100,
+      "gpu_node_monthly_usd": 3800,
+      "winner": "API"
+    },
+    {
+      "monthly_tokens_millions": 1700,
+      "api_monthly_usd": 3740,
+      "gpu_node_monthly_usd": 3800,
+      "winner": "Break-Even"
+    },
+    {
+      "monthly_tokens_millions": 5000,
+      "api_monthly_usd": 11000,
+      "gpu_node_monthly_usd": 4400,
+      "winner": "Self-Hosted GPU"
+    }
+  ]
+}

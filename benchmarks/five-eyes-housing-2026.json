@@ -1,0 +1,36 @@
+{
+  "dataset": "USC.NEWS 2026 Five-Eyes Mortgage Transmission Dataset",
+  "article": "https://usc.news/finance/five-eyes-mortgage-housing-squeeze-2026-us-uk-canada-australia-nz/",
+  "markets": [
+    {
+      "country": "United States",
+      "dominant_structure": "30-year fixed (>88%)",
+      "typical_new_rate_pct": "6.2-6.6",
+      "existing_borrower_reset_risk": "Low"
+    },
+    {
+      "country": "United Kingdom",
+      "dominant_structure": "2-year & 5-year fixed",
+      "typical_new_rate_pct": "4.4-4.9",
+      "existing_borrower_reset_risk": "High"
+    },
+    {
+      "country": "Canada",
+      "dominant_structure": "5-year fixed / variable renewal",
+      "typical_new_rate_pct": "4.2-4.7",
+      "existing_borrower_reset_risk": "Severe"
+    },
+    {
+      "country": "Australia",
+      "dominant_structure": "Variable (~85%)",
+      "typical_new_rate_pct": "5.8-6.2",
+      "existing_borrower_reset_risk": "Immediate"
+    },
+    {
+      "country": "New Zealand",
+      "dominant_structure": "6-month to 2-year fixed",
+      "typical_new_rate_pct": "5.1-5.6",
+      "existing_borrower_reset_risk": "High"
+    }
+  ]
+}
